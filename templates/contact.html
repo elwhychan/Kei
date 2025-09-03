@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Contact - Keiji{% endblock %}
+
+{% block content %}
+<div class="contact-section"> 
+	<div class="contact-info">
+        <h2 class="contact-title">Anda Butuh Bantuan Hubungi Saya</h2>
+        <p class="contact-description"></p>
+        <div class="contact-details">
+            <p href="#">Email: <a href="mailto:keijipro91@gmail.com"">keijipro91@gmail.com</a></p>
+            <p>Telepon:<a href="tel:+6285707357830"> +6285707357830</a></p>
+            <p>Jalan: Basoka no 9, Kota Boom</p>
+        </div>
+  </div>
+        <form id="contact-form">
+            <div class="form-group">
+		<label for="name">Nama:</label>
+                <input type="text" id="name" name="name"  required placeholder="Nama lengkap Anda">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Alamat Email">
+		</div>
+            <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" id="subject" name="subject" required placeholder="Subject Anda">
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" required placeholder="Pesan Anda..."></textarea>
+            </div>
+            <button type="submit" class="submit-button">Kirim</button>
+        </form>
+    <p id="contact-message"></p>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+{% endblock %}

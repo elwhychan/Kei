@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Music - Keiji{% endblock %}
+
+{% block content %}
+    <main>
+        <section class="music-section">
+            <h2>Songs</h2>
+            <div id="songs-container">
+                </div>
+        </section>
+
+        <section class="music-section">
+            <h2>Mixed Album</h2>
+            <div id="mixed-album-container">
+                </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/music.js') }}"></script>
+{% endblock %}

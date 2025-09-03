@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Galeri - Keiji{% endblock %}
+
+{% block content %}
+    <h1>Galeri</h1>
+
+    <div class="category-nav">
+        <a href="#" class="category-button active" data-category="semua">Semua</a>
+        {% for name, path in categories.items() %}
+        <a href="#" class="category-button" data-category="{{ name|lower }}">{{ name }}</a>
+        {% endfor %}
+    </div>
+
+    <div id="gallery-container">
+        </div>
+    <div class="pagination-container">
+    </div>
+
+    <p id="loading-message">Sabarr...</p>
+    <p id="no-images-message" style="display:none;">No Item Erorr.</p>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+{% endblock %}

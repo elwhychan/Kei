@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Beranda{% endblock %}
+
+{% block content %}
+        <h1>Selamat Datang di Galeri Keiji Shensei</h1>
+
+        <section class="home-section">
+            <h2>Karya Gambar Terbaru</h2>
+            <div id="home-image-slider" class="slider-container">
+                </div>
+        </section>
+
+        <section class="home-section">
+            <h2>Video Pilihan</h2>
+            <div id="home-video-slider" class="slider-container">
+                </div>
+        </section>
+        <section class="home-section">
+            <div id="daily-quote-container">
+                <blockquote>
+                    <p id="daily-quote"></p>
+                    <cite id="quote-author"></cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="home-section">
+            <h2>Galeri Mini</h2>
+            <div id="mini-gallery" class="gallery-grid">
+                </div>
+        </section>
+        
+        <section class="home-section">
+            <h2>Dapatkan Notifikasi</h2>
+            <form id="subscribe-form" method="post">
+                <input type="email" name="email" placeholder="Masukkan email Anda" required>
+                <button type="submit">Berlangganan</button>
+            </form>
+            <p id="subscribe-message"></p>
+        </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

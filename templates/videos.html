@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Videos - Keiji{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Videos</h1>
+        <section id="videos-container" class="videos-slider">
+            </section>
+    </main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/videos.js') }}"></script>
+{% endblock %}
